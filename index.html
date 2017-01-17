@@ -1,0 +1,45 @@
+<title>FFBEガチャシミュレーター</title>
+<style type="text/css">
+<!--
+div {
+  max-height: 999999px;
+}
+div.scr {
+  overflow-y: auto;   /* スクロール表示 */ 
+  width: 550px;
+  height: 150px;
+  border: 1px #000000 solid;
+  padding: 5px;
+}
+-->
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/marx/2.0.4/marx.css">
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+<body>
+<script type="text/javascript" src="program.js" charset="Shift_JIS"></script>
+<script type="text/javascript" src="gacha.js" charset="Shift_JIS"></script>
+<script type="text/javascript" src="gacha_pickup.js" charset="Shift_JIS"></script>
+
+<main>
+<h2>FFBEガチャシミュレーター</h2>
+確率があっているかどうかは不明(見間違えがない限りはあってるはず...)<br /> 金額は12500ラピスを8800円で買った場合となります(小数点以下切り捨て)
+<br />
+<br />
+<a href="#" onclick="Execute(1);"><button>通常11連ガチャ</button></a>
+<a href="#" onclick="Execute(3);"><button>ピックアップ11連ガチャ</button></a>
+<a href="#" onclick="Execute(2);"><button>通常ガチャ</button></a>
+<a href="#" onclick="Execute(4);"><button>ピックアップガチャ</button></a>
+<br />
+<br />
+<div id="output1"></div>
+<br />
+ガチャ履歴<br />
+<div class="scr" id="output2"></div>
+<a href="#" onclick="init();"><button>初期化</button></a>
+<br />
+</main>
+
+</body>
+</html>

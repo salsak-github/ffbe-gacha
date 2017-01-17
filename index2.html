@@ -1,0 +1,39 @@
+<title>FFBEガチャシミュレーター</title>
+<style type="text/css">
+<!--
+div {
+  max-height: 999999px;
+}
+div.scr {
+  overflow-y: auto;   /* スクロール表示 */ 
+  width: 550px;
+  height: 150px;
+  border: 1px #000000 solid;
+  padding: 5px;
+}
+-->
+</style>
+</head>
+<meta http-equiv="Content-Type" content="text/html; charset=Shift_JIS">
+
+<body>
+<script type="text/javascript" src="program.js" charset="Shift_JIS"></script>
+<script type="text/javascript" src="gacha.js" charset="Shift_JIS"></script>
+<script type="text/javascript" src="gacha_pickup.js" charset="Shift_JIS"></script>
+</body>
+<h2>FFBEガチャシミュレーター その2</h2>
+<form name="form1">
+<select name="character">
+</select>
+<select name="shurui">
+<option value="">【種類】</option>
+<option value="normal">通常召喚</option>
+<option value="pickup">ピックアップ召喚</option>
+</select>
+<input type="button" value="クポ♪" onclick="Execute2();">
+</form>
+<div id="output1"></div>
+<br />
+<div id="output2"></div>
+</html>
+<script type="text/javascript" src="ddlb.js" charset="Shift_JIS"></script>
