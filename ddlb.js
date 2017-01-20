@@ -4,13 +4,13 @@ for (var i = 0; i < character.length; i++) {
     ddlbChara.push(character[i][0]);
 }
 
-// ‘I‘ðƒŠƒXƒg‚ðì¬
-createSelection(form1.elements['character'], "yƒLƒƒƒ‰ƒNƒ^[‘I‘ðz", ddlbChara, ddlbChara);
+// é¸æŠžãƒªã‚¹ãƒˆã‚’ä½œæˆ
+createSelection(form1.elements['character'], "ã€ã‚­ãƒ£ãƒ©ã‚¯ã‚¿ãƒ¼é¸æŠžã€‘", ddlbChara, ddlbChara);
 
 ////////////////////////////////////////////////////
 //
-// ‘I‘ðƒ{ƒbƒNƒX‚É‘I‘ðŽˆ‚ð’Ç‰Á‚·‚éŠÖ”
-//      ˆø”: ( selectƒIƒuƒWƒFƒNƒg, value’l, text’l)
+// é¸æŠžãƒœãƒƒã‚¯ã‚¹ã«é¸æŠžè‚¢ã‚’è¿½åŠ ã™ã‚‹é–¢æ•°
+//      å¼•æ•°: ( selectã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ, valueå€¤, textå€¤)
 function addSelOption(selObj, val, txt) {
     selObj.length++;
     selObj.options[selObj.length - 1].value = val;
@@ -18,13 +18,13 @@ function addSelOption(selObj, val, txt) {
 }
 /////////////////////////////////////////////////////
 //
-//@‘I‘ðƒŠƒXƒg‚ðì‚éŠÖ” 
-//      ˆø”: ( selectƒIƒuƒWƒFƒNƒg, Œ©o‚µ, value’l”z—ñ , text’l”z—ñ )
+//ã€€é¸æŠžãƒªã‚¹ãƒˆã‚’ä½œã‚‹é–¢æ•° 
+//      å¼•æ•°: ( selectã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆ, è¦‹å‡ºã—, valueå€¤é…åˆ— , textå€¤é…åˆ— )
 //
 function createSelection(selObj, midashi, aryValue, aryText) {
     selObj.length = 0;
     addSelOption(selObj, "", midashi);
-    // ‰Šú‰»
+    // åˆæœŸåŒ–
     for (var i = 0; i < aryValue.length; i++) {
         addSelOption(selObj, aryValue[i], aryText[i]);
     }
