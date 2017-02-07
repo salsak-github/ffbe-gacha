@@ -7,7 +7,6 @@
     <!--
     div.scr {
       overflow-y: auto;   /* スクロール表示 */ 
-      width: 480px;
       height: 150px;
       border: 1px #000000 solid;
       padding: 5px;
@@ -33,11 +32,11 @@
         </div>
         <div role="main" class="ui-content">
             確率があっているかどうかは不明(見間違えがない限りはあってるはず...)<br />金額は12500ラピスを8800円で買った場合となります(小数点以下切り捨て)
-            <div data-role="controlgroup" data-type="horizontal">
+            <div data-role="controlgroup">
                 <a href="#" class="ui-btn" onclick="Execute(1);">11連通常ガチャ</a>
                 <a href="#" class="ui-btn" onclick="Execute(3);">11連ピックアップガチャ</a>
             </div>
-            <div data-role="controlgroup" data-type="horizontal">
+            <div data-role="controlgroup">
                 <a href="#" class="ui-btn" onclick="Execute(2);">単発通常ガチャ</a>
                 <a href="#" class="ui-btn" onclick="Execute(4);">単発ピックアップガチャ</a>
             </div>
@@ -45,9 +44,7 @@
             <br />
             ガチャ履歴<br />
             <div class="scr" id="output2"></div>
-            <div data-role="controlgroup" data-type="horizontal">
-                <a href="#" class="ui-btn" onclick="init();">初期化</a>
-            </div>
+            <a href="#" class="ui-btn ui-mini" onclick="init();">初期化</a>
         </div>
         <!-- <div data-role="footer"> -->
         <!--    <h3>footer</h3> -->
