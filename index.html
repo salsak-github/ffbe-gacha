@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>FFBEガチャシミュレーター</title>
+    <style type="text/css">
+    <!--
+    div.scr {
+      overflow-y: auto;   /* スクロール表示 */ 
+      height: 150px;
+      border: 1px #000000 solid;
+      padding: 5px;
+    }
+    -->
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+    <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+    <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css" />
+    <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" src="program.js"></script>
+    <script type="text/javascript" src="gacha.js"></script>
+    <script type="text/javascript" src="gacha_pickup.js"></script>
+</head>
+<body>
+
+    <div data-role="page">
+        <div data-role="header">
+            <h1>FFBEガチャシミュレーター</h1>
+        </div>
+        <div role="main" class="ui-content">
+            確率があっているかどうかは不明(見間違えがない限りはあってるはず...)<br />金額は12500ラピスを8800円で買った場合となります(小数点以下切り捨て)
+            <div data-role="controlgroup">
+                <a href="#" class="ui-btn" onclick="Execute(1);">11連通常ガチャ</a>
+                <a href="#" class="ui-btn" onclick="Execute(3);">11連ピックアップガチャ</a>
+            </div>
+            <div data-role="controlgroup">
+                <a href="#" class="ui-btn" onclick="Execute(2);">単発通常ガチャ</a>
+                <a href="#" class="ui-btn" onclick="Execute(4);">単発ピックアップガチャ</a>
+            </div>
+            <div id="output1"></div>
+            <br />
+            ガチャ履歴<br />
+            <div class="scr" id="output2"></div>
+            <a href="#" class="ui-btn ui-mini" onclick="init();">初期化</a>
+        </div>
+        <!-- <div data-role="footer"> -->
+        <!--    <h3>footer</h3> -->
+        <!-- </div> -->
+    </div>
+</body>
+
+</html>
