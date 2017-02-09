@@ -1,38 +1,56 @@
-<title>FFBEガチャシミュレーター</title>
-<style type="text/css">
-<!--
-div {
-  max-height: 999999px;
-}
-div.scr {
-  overflow-y: auto;   /* スクロール表示 */ 
-  width: 550px;
-  height: 150px;
-  border: 1px #000000 solid;
-  padding: 5px;
-}
--->
-</style>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>FFBEガチャシミュレーター その2</title>
+  <style type="text/css">
+    <!-- div.scr {
+      overflow-y: auto;
+      /* スクロール表示 */
+      height: 150px;
+      border: 1px #000000 solid;
+      padding: 5px;
+    }
+    
+    -->
+  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" /> -->
+  <!-- <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script> -->
+  <!-- <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="jquery.mobile-1.4.5.min.css" />
+  <script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+  <script type="text/javascript" src="jquery.mobile-1.4.5.min.js"></script>
+  <script type="text/javascript" src="program.js"></script>
+  <script type="text/javascript" src="gacha.js"></script>
+  <script type="text/javascript" src="gacha_pickup.js"></script>
 </head>
 
 <body>
-<script type="text/javascript" src="program.js"></script>
-<script type="text/javascript" src="gacha.js"></script>
-<script type="text/javascript" src="gacha_pickup.js"></script>
+
+  <div data-role="page">
+    <div data-role="header">
+      <h1>FFBEガチャシミュレーター その2</h1>
+    </div>
+    <div role="main" class="ui-content">
+      特定のキャラが出るまでに何回引けるか確認出来るクポ♪
+      <form name="form1">
+        <fieldset data-role="controlgroup" data-type="horizontal">
+          <select name="character" data-mini="true"></select>
+          <select name="shurui" data-mini="true">
+            <option value="">【種類】</option>
+            <option value="normal">通常召喚</option>
+            <option value="pickup">ピックアップ召喚</option>
+          </select>
+        </fieldset>
+        <a href="#" class="ui-btn ui-mini" onclick="Execute2();">引くクポ♪</a>
+      </form>
+      <div id="output1"></div>
+      <br />
+      <div id="output2"></div>
+    </div>
+  </div>
 </body>
-<h2>FFBEガチャシミュレーター その2</h2>
-<form name="form1">
-<select name="character">
-</select>
-<select name="shurui">
-<option value="">【種類】</option>
-<option value="normal">通常召喚</option>
-<option value="pickup">ピックアップ召喚</option>
-</select>
-<input type="button" value="クポ♪" onclick="Execute2();">
-</form>
-<div id="output1"></div>
-<br />
-<div id="output2"></div>
+
 </html>
 <script type="text/javascript" src="ddlb.js"></script>
