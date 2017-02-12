@@ -32,23 +32,22 @@
         </div>
         <div role="main" class="ui-content">
             確率があっているかどうかは不明(見間違えがない限りはあってるはず...)<br />金額は12500ラピスを8800円で買った場合となります(小数点以下切り捨て)
-            <div data-role="controlgroup">
-                <a href="#" class="ui-btn" onclick="Execute(1);">11連通常ガチャ</a>
-                <a href="#" class="ui-btn" onclick="Execute(3);">11連ピックアップガチャ</a>
-            </div>
-            <div data-role="controlgroup">
-                <a href="#" class="ui-btn" onclick="Execute(2);">単発通常ガチャ</a>
-                <a href="#" class="ui-btn" onclick="Execute(4);">単発ピックアップガチャ</a>
-            </div>
+            <form name="form1">
+                <div data-role="controlgroup" data-type="horizontal">
+                    <select name="shurui" data-mini="true">
+                        <option value="normal">通常</option>
+                        <option value="pickup" selected>ピックアップ</option>
+                    </select>
+                    <a href="#" class="ui-btn ui-mini" onclick="Execute(1);">11連</a>
+                    <a href="#" class="ui-btn ui-mini" onclick="Execute(2);">単発</a>
+                </div>
+            </form>
             <div id="output1"></div>
             <br />
             ガチャ履歴<br />
             <div class="scr" id="output2"></div>
             <a href="#" class="ui-btn ui-mini" onclick="init();">初期化</a>
         </div>
-        <!-- <div data-role="footer"> -->
-        <!--    <h3>footer</h3> -->
-        <!-- </div> -->
     </div>
 </body>
 

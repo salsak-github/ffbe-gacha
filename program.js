@@ -197,10 +197,13 @@ var character = [
 // ガチャ実行メイン
 //
 function Execute(shurui) {
+	// DDLBの選択
+	var idx_shurui = document.form1.shurui.selectedIndex;
+
 	// 確率取得
-	if (shurui == 1 || shurui == 2) {
+	if (idx_shurui == 0) {
 		getKakuritsu();
-	} else if (shurui == 3 || shurui == 4) {
+	} else if (idx_shurui == 1) {
 		getKakuritsuPickUp();
 	}
 
@@ -261,7 +264,7 @@ function Execute(shurui) {
 	var rare5cnt = 0;
 
 	// ランダムで算出した値からどのキャラクターが出たかを確定
-	if (shurui == 1 || shurui == 3) {
+	if (shurui == 1) {
 		// 11連ガチャ
 		// ★4確定
 		for (var j = 0; j < character.length; j++) {
@@ -301,7 +304,7 @@ function Execute(shurui) {
 		}
 		// 消費ラピスを加算
 		lapis += 5000;
-	} else if (shurui == 2 || shurui == 4) {
+	} else if (shurui == 2) {
 		// 単発ガチャ
 		// gacha[0]のみを対象とする。
 		for (var j = 0; j < character.length; j++) {
