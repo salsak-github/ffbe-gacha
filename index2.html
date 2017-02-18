@@ -24,15 +24,15 @@
     <div role="main" class="ui-content">
       特定のキャラが出るまでに何回引けるかシミュレート出来るクポ♪
       <form name="form1">
-        <fieldset data-role="controlgroup" data-type="horizontal">
+        <div data-role="controlgroup" data-type="horizontal">
           <select name="character" data-mini="true"></select>
           <select name="shurui" data-mini="true">
             <option value="">【種類】</option>
             <option value="normal">通常召喚</option>
             <option value="pickup">ピックアップ召喚</option>
           </select>
-        </fieldset>
         <a href="#" class="ui-btn ui-mini" onclick="Execute2();">引くクポ♪</a>
+        </div>
       </form>
       <div id="output1"></div>
       <br />
