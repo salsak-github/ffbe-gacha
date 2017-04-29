@@ -31,7 +31,8 @@ var rireki = "";
 // MD:魔法＆防御
 // SH:サポート＆回復
 var character = [
-	["2B", 4, ""],
+	["ユウナ", 4, ""],
+	["ルールー", 4, ""],
 	["氷炎の騎士ラスウェル", 1, "A"],
 	["ジライヤ", 1, "MD"],
 	["エーコ", 1, "SH"],
@@ -72,7 +73,7 @@ var character = [
 	["ディリータ", 1, "SH"],
 	["ラムザ", 1, "SH"],
 	["ライトニング", 1, "A"],
-	["9S", 5, ""],
+	["シーモア", 5, ""],
 	["カエデ", 2, "A"],
 	["オウガ", 2, "A"],
 	["スタイナー", 2, ""],
@@ -124,7 +125,6 @@ var character = [
 	["ガーネット", 2, "SH"],
 	["チヅル", 2, "A"],
 	["光の戦士", 2, "MD"],
-	["21O", 6, ""],
 	["オトギリ", 3, "SH"],
 	["黒のワルツ3号", 3, "MD"],
 	["シャリー", 3, "SH"],
@@ -140,7 +140,7 @@ var character = [
 	["ティム", 3, "SH"],
 	["クピピ", 3, "SH"],
 	["ラグルス", 3, "A"],
-	["ワッカ", 3, "A"],
+	["ワッカ", 6, "A"],
 	["カーミル", 3, "A"],
 	["ガウ", 3, "A"],
 	["常夏のリド", 3, "SH"],
@@ -226,7 +226,7 @@ window.onload = onLoad;
 // ロード時に実行
 //
 function onLoad() {
-	document.getElementById("output3").innerHTML = "2B、9S、21O";
+	document.getElementById("output3").innerHTML = "ユウナ(★5)、ルールー(★5)、シーモア(★4)、ワッカ(★3)";
 }
 
 ////////////////////////////////////////////////////
@@ -535,9 +535,9 @@ function Execute3(shurui) {
 	}
 
 	// 確率を対象のものに変更する
-	pattern[0][0] = floatFormat(1 / rare[0], 5);
+	pattern[0][0] = floatFormat(3 / rare[0], 5);
 	pattern[1][1] = floatFormat(19 / rare[1], 5);
-	pattern[2][2] = floatFormat(80 / rare[2], 5);
+	pattern[2][2] = floatFormat(78 / rare[2], 5);
 	pattern[3][0] = 0;
 	pattern[4][1] = 0;
 	pattern[5][2] = 0;
